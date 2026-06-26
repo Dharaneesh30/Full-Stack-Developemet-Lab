@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamPillow Location & Delivery Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with logo and navigation links -->
+    <header class="site-header">
+        <div class="container header-layout">
+            <div class="brand">
+                <img src="assets/images/pillow.png" alt="DreamPillow logo" class="brand-logo">
+                <div>
+                    <p class="brand-subtitle">DreamPillow</p>
+                    <h1>Location & Delivery Assistant</h1>
+                </div>
+            </div>
+
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#drag-drop">Drag &amp; Drop</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section introducing the project -->
+        <section class="hero-section" id="home">
+            <div class="container hero-card">
+                <article>
+                    <p class="section-label">HTML5 API Laboratory Exercise</p>
+                    <h2>DreamPillow Delivery Assistant</h2>
+                    <p class="hero-text">
+                        This webpage demonstrates the HTML5 Drag and Drop API and Geolocation API
+                        through a simple DreamPillow delivery and location assistant.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Drag and Drop API demonstration section -->
+        <section class="content-section" id="drag-drop">
+            <div class="container">
+                <article class="card">
+                    <div class="section-heading">
+                        <p class="section-label">Section 1</p>
+                        <h2>Drag and Drop API</h2>
+                    </div>
+
+                    <div class="drag-layout">
+                        <div class="product-panel">
+                            <h3>DreamPillow Product</h3>
+                            <p>Drag the product image into the delivery drop zone.</p>
+                            <img
+                                src="assets/images/pillow.png"
+                                alt="DreamPillow product"
+                                id="pillowImage"
+                                class="draggable-image"
+                                draggable="true"
+                            >
+                        </div>
+
+                        <div class="drop-panel">
+                            <h3>Delivery Drop Zone</h3>
+                            <div id="dropZone" class="drop-zone">
+                                <p id="dropLabel">Drop DreamPillow Here</p>
+                            </div>
+                            <p id="dropMessage" class="status-message" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Geolocation and map lookup sections -->
+        <section class="content-section" id="location">
+            <div class="container location-grid">
+                <article class="card">
+                    <div class="section-heading">
+                        <p class="section-label">Section 2</p>
+                        <h2>Current Location</h2>
+                    </div>
+                    <p>Click the button below to get your current coordinates using the HTML5 Geolocation API.</p>
+                    <button type="button" id="locationButton" class="action-button">Get My Current Location</button>
+
+                    <div class="result-box">
+                        <p><strong>Latitude:</strong> <span id="latitudeValue">Not available</span></p>
+                        <p><strong>Longitude:</strong> <span id="longitudeValue">Not available</span></p>
+                        <p id="geoMessage" class="status-message" aria-live="polite"></p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="section-heading">
+                        <p class="section-label">Section 3</p>
+                        <h2>Find Location on Map</h2>
+                    </div>
+                    <p>Enter latitude and longitude values to open the selected location in Google Maps.</p>
+
+                    <form id="mapForm" class="map-form">
+                        <label for="mapLatitude">Latitude</label>
+                        <input type="text" id="mapLatitude" name="mapLatitude" placeholder="Enter latitude">
+
+                        <label for="mapLongitude">Longitude</label>
+                        <input type="text" id="mapLongitude" name="mapLongitude" placeholder="Enter longitude">
+
+                        <button type="submit" class="action-button">Show Location</button>
+                    </form>
+
+                    <p id="mapMessage" class="status-message" aria-live="polite"></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with basic contact details -->
+    <footer class="site-footer" id="contact">
+        <div class="container footer-layout">
+            <p>&copy; 2026 DreamPillow. All rights reserved.</p>
+            <p>Email: support@dreampillow.com</p>
+            <p>Phone: +91 94892 40892</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

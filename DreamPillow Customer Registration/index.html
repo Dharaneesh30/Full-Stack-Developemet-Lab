@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DreamPillow Customer Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>DreamPillow Customer Registration</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="form-section">
+      <article class="card">
+        <h2>Register Here</h2>
+        <p class="intro-text">Fill in the form below to register as a DreamPillow customer.</p>
+
+        <form id="registrationForm" novalidate>
+          <div class="form-group">
+            <label for="customerName">Customer Name</label>
+            <input type="text" id="customerName" name="customerName" placeholder="Enter your name">
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password">
+            <span class="error-message" id="passwordError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            <span class="error-message" id="dobError"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="option-row">
+              <label><input type="radio" name="gender" value="Male"> Male</label>
+              <label><input type="radio" name="gender" value="Female"> Female</label>
+              <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+            <span class="error-message" id="genderError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" name="city">
+              <option value="">Select City</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Mumbai">Mumbai</option>
+            </select>
+            <span class="error-message" id="cityError"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Interested Features</label>
+            <div class="option-column">
+              <label><input type="checkbox" name="features" value="Soft Fabric"> Soft Fabric</label>
+              <label><input type="checkbox" name="features" value="Neck Support"> Neck Support</label>
+              <label><input type="checkbox" name="features" value="Cooling Comfort"> Cooling Comfort</label>
+              <label><input type="checkbox" name="features" value="Travel Friendly"> Travel Friendly</label>
+            </div>
+            <span class="error-message" id="featuresError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+            <span class="error-message" id="addressError"></span>
+          </div>
+
+          <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset" class="secondary-button">Reset</button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <section id="products" class="report-section">
+      <article class="card">
+        <div id="reportContainer">
+          <h2>Customer Registration Report</h2>
+          <p class="intro-text">The submitted customer details will appear here after successful validation.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <article class="card">
+        <h2>Contact</h2>
+        <p>Email: support@dreampillow.com</p>
+        <p>Phone: +91 94892 40892</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 DreamPillow. All rights reserved.</p>
+      <p>Contact: support@dreampillow.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
