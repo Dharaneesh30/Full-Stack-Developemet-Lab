@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Digital Resource Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            ========================================<br>
+            STUDENT DIGITAL RESOURCE SERVER<br>
+            ========================================
+        </div>
+
+        <div class="menu">
+            <button onclick="handleMenu(1)">1. View Text File</button>
+            <button onclick="handleMenu(2)">2. View HTML File</button>
+            <button onclick="handleMenu(3)">3. View PDF File</button>
+            <button onclick="handleMenu(4)">4. View Image</button>
+            <button onclick="handleMenu(5)">5. Play Video</button>
+            <button onclick="handleMenu(6)">6. Download File</button>
+            <button onclick="handleMenu(7)">7. Exit</button>
+        </div>
+
+        <div id="viewer" class="viewer">
+            <!-- Content will be displayed here based on selection -->
+            <p>Select an option from the menu.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

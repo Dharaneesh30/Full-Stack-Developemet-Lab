@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Streaming Server</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .file-list { margin-top: 20px; }
+        .file-item { margin-bottom: 10px; }
+        a { text-decoration: none; color: #0066cc; padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; display: inline-block; }
+        a:hover { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Available Files</h1>
+    <p>Select a file to view/download (Streamed from server):</p>
+    <div class="file-list">
+        <div class="file-item"><a href="/download/sample.txt" target="_blank">View sample.txt</a></div>
+        <div class="file-item"><a href="/download/sample.html" target="_blank">View sample.html</a></div>
+        <div class="file-item"><a href="/download/README.md" target="_blank">View README.md</a></div>
+        <div class="file-item"><a href="/download/missing.txt" target="_blank">Test Missing File (404)</a></div>
+    </div>
+</body>
+</html>
