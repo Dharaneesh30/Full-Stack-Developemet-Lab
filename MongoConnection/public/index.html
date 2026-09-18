@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB User Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.06 19.43 4 16.05 4 12C4 7.95 7.06 4.57 11 4.07V19.93ZM13 4.07C16.94 4.57 20 7.95 20 12C20 16.05 16.94 19.43 13 19.93V4.07Z" fill="var(--primary)"/>
+                </svg>
+                <h1>User Directory</h1>
+            </div>
+            <p>Connects to MongoDB Atlas to manage users.</p>
+        </header>
+
+        <main class="main-content">
+            <section class="card form-section">
+                <h2>Add New User</h2>
+                <form id="userForm">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="25" min="1" max="120" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Save User</span>
+                        <div class="loader hidden" id="submitLoader"></div>
+                    </button>
+                    <div id="formMessage" class="message hidden"></div>
+                </form>
+            </section>
+
+            <section class="card list-section">
+                <div class="list-header">
+                    <h2>Registered Users</h2>
+                    <button id="refreshBtn" class="btn-icon" title="Refresh List">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="users-container" id="usersList">
+                    <div class="loader-container" id="listLoader">
+                        <div class="loader large"></div>
+                    </div>
+                    <!-- Users will be injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editModal" class="modal hidden">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h2>Edit User</h2>
+                <button type="button" class="btn-close" id="closeModalBtn">&times;</button>
+            </div>
+            <form id="editForm">
+                <input type="hidden" id="editUserId">
+                <div class="input-group">
+                    <label for="editName">Full Name</label>
+                    <input type="text" id="editName" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="editEmail">Email Address</label>
+                    <input type="email" id="editEmail" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="editAge">Age</label>
+                    <input type="number" id="editAge" name="age" min="1" max="120" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelEditBtn">Cancel</button>
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text" id="editSubmitText">Update User</span>
+                        <div class="loader hidden" id="editSubmitLoader"></div>
+                    </button>
+                </div>
+                <div id="editFormMessage" class="message hidden"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

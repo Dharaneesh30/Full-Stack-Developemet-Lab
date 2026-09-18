@@ -1,0 +1,461 @@
+/* index.css — Global Styles for React Practice Lab */
+
+/* ================================
+   RESET & BASE
+================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ================================
+   APP LAYOUT
+================================ */
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  min-height: 100vh;
+}
+
+/* ================================
+   HOME — HEADER
+================================ */
+.app-header {
+  text-align: center;
+  padding: 2.5rem 1rem 2rem;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 2rem;
+}
+
+.app-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #60a5fa;
+  margin-bottom: 0.4rem;
+}
+
+.app-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.app-meta {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* ================================
+   HOME — EXERCISE CARDS
+================================ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.exercise-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s, background-color 0.2s;
+}
+
+.exercise-card:hover {
+  border-color: #60a5fa;
+  background-color: #243349;
+  transform: translateY(-3px);
+}
+
+.card-number {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-link {
+  font-size: 0.85rem;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* ================================
+   NAVIGATION BAR (inside exercise)
+================================ */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.btn-back {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #94a3b8;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.btn-back:hover {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.nav-title {
+  font-size: 0.9rem;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* ================================
+   EXERCISE CONTAINER
+================================ */
+.exercise-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ================================
+   EXERCISE HEADER
+================================ */
+.exercise-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.exercise-number {
+  background: #1e40af;
+  color: #bfdbfe;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.exercise-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+/* ================================
+   EXERCISE QUESTION
+================================ */
+.exercise-question {
+  background: #1e293b;
+  border-left: 4px solid #60a5fa;
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   EXERCISE SECTIONS
+================================ */
+.exercise-section {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.exercise-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  margin-bottom: 0.75rem;
+}
+
+.exercise-section h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #93c5fd;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-section p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-section ul,
+.exercise-section ol {
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.exercise-section li {
+  margin-bottom: 0.4rem;
+}
+
+/* ================================
+   NOTE BOX
+================================ */
+.exercise-note {
+  background: #1c2d45;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  color: #93c5fd;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* ================================
+   CODE BLOCK
+================================ */
+.code-block {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.83rem;
+  color: #86efac;
+  overflow-x: auto;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+code {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: #86efac;
+}
+
+/* ================================
+   OUTPUT BOX
+================================ */
+.output-box {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.output-box p {
+  margin-bottom: 0.3rem;
+  color: #e2e8f0;
+}
+
+.output-success {
+  border-color: #16a34a;
+  background: #052e16;
+  color: #86efac;
+}
+
+.output-danger {
+  border-color: #dc2626;
+  background: #2d0a0a;
+  color: #fca5a5;
+}
+
+/* ================================
+   INPUTS & BUTTONS
+================================ */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.input-group label {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.input-field {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #e2e8f0;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.9rem;
+  width: 140px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: #60a5fa;
+}
+
+.btn-primary {
+  background: #1d4ed8;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+/* ================================
+   DEBUGGING STEPS
+================================ */
+.debug-steps {
+  padding-left: 1.5rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.debug-steps li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+/* ================================
+   ANY — TYPE BADGES
+================================ */
+.any-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+.any-table th {
+  background: #1e293b;
+  color: #7dd3fc;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.any-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+}
+
+.any-table tr:last-child td {
+  border-bottom: none;
+}
+
+.type-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+.type-number  { background: #1d4ed8; color: #bfdbfe; }
+.type-string  { background: #16a34a; color: #bbf7d0; }
+.type-boolean { background: #b45309; color: #fde68a; }
+.type-array   { background: #7c3aed; color: #ddd6fe; }
+.type-object  { background: #0e7490; color: #a5f3fc; }
+
+/* ================================
+   VIVA POINTS SECTION
+================================ */
+.viva-points {
+  border-color: #854d0e;
+  background: #1c1208;
+}
+
+.viva-points h3 {
+  color: #fbbf24;
+}
+
+.viva-points li {
+  color: #fde68a;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.app-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  border-top: 1px solid #1e293b;
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+/* ================================
+   CONTENT WRAPPER
+================================ */
+.content {
+  padding-bottom: 2rem;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 1.4rem;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input-field {
+    width: 100%;
+  }
+}
