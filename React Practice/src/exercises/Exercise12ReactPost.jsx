@@ -232,7 +232,7 @@ export default RegisterStudentAPI;`;
                         borderRadius: "6px",
                         backgroundColor: status.type === 'success' ? '#dcfce7' : '#fee2e2',
                         color: status.type === 'success' ? '#166534' : '#991b1b',
-                        border: \`1px solid \${status.type === 'success' ? '#bbf7d0' : '#fecaca'}\`
+                        border: `1px solid ${status.type === 'success' ? '#bbf7d0' : '#fecaca'}`
                     }}>
                         {status.type === 'success' ? '✅ ' : '❌ '} {status.message}
                     </div>
