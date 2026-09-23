@@ -6,7 +6,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/students')
+    fetch('http://localhost:3004/api/students')
       .then(res => res.json())
       .then(data => { setStudents(data); setLoading(false); })
       .catch(err => { console.error(err); setLoading(false); });

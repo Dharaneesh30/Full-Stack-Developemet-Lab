@@ -30,4 +30,4 @@ app.put('/api/students/:id', async (req, res) => {
     }
 });
 
-app.listen(5000, () => console.log('PUT API running on port 5000'));
+app.listen(3006, () => console.log('PUT API running on port 3006'));

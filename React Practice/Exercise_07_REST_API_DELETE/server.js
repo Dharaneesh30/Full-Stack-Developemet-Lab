@@ -26,4 +26,4 @@ app.delete('/api/students/:id', async (req, res) => {
     }
 });
 
-app.listen(5000, () => console.log('DELETE API running on port 5000'));
+app.listen(3007, () => console.log('DELETE API running on port 3007'));
